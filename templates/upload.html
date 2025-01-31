@@ -3,168 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BROWNIE - LABRADOR RETRIEVER</title>
+    <title>Upload Dog Details</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('labrador-bg.jpg') center/cover no-repeat, #CED6CF;
+            background: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            opacity: 0;
-            animation: fadeIn 1.2s ease-in forwards;
         }
-
         .container {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            background: white;
             padding: 30px;
-            max-width: 800px;
-            width: 90%;
-            text-align: center;
-            border: 6px solid #656565;
-        }
-
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #656565;
-            position: relative;
-        }
-
-        .logo {
-            width: 80px;
-            height: auto;
-            margin-left: auto;
-            margin-right: 10px;
-        }
-
-        .profile-image {
-            border-radius: 50%;
-            width: 160px;
-            height: 160px;
-            object-fit: cover;
-            border: 6px solid #656565;
-            transition: transform 0.4s, box-shadow 0.4s;
-        }
-
-        .profile-image:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .name-section {
-            text-align: left;
-            width: 100%;
-        }
-
-        .name-section h1 {
-            font-size: 2.8em;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin: 15px 0;
-        }
-
-        .details-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .details-list li {
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-            text-transform: uppercase;
-        }
-
-        .dog-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .dog-gallery img {
-            width: 100%;
             border-radius: 10px;
-            object-fit: cover;
-            height: 160px;
-            border: 6px solid #656565;
-            transition: transform 0.4s, box-shadow 0.4s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
         }
-
-        .dog-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-
-        .contact {
-            font-weight: bold;
-            margin-top: 20px;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            border-top: 2px solid #656565;
-            padding-top: 10px;
+        button {
+            background: #656565;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .logo {
-                margin: 0 auto 10px;
-            }
+        button:hover {
+            background: #4a4a4a;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>PawSignature : Digital identity for every stray</h2>
-        <header class="header">
-            <img src="brownie.jpg" alt="BROWNIE THE LABRADOR" class="profile-image">
-            <img src="logo.jpg" alt="LOGO" class="logo">
-        </header>
-        <section class="name-section">
-            <h1>BROWNIE</h1>
-            <ul class="details-list">
-                <li>BREED: LABRADOR RETRIEVER</li>
-		<li>TERRITORY: JP NAGARA bbmp</li>
-                <li>AGE: 1.5 YEARS</li>
-                <li>GENDER: MALE</li>
-		<li>VACINATION: PARVO VIRUS,LEPTOSPIROISIS,LYME,RABIES</li>
-		<li>HEALTH: EXCELLENT</li>
-		<li>ANIMAL BIRTH CONTROL: DONE</li>
-                <li>CONTACT: <a href="tel:+918050371367">8050371367</a></li>
-            </ul>
-        </section>
-        <p>
-            The Labrador Retriever is one of the most popular dog breeds worldwide. It is known for its friendly nature,
-            intelligence, and adaptability, making it a great companion for families.
-        </p>
-        <section class="dog-gallery">
-            <img src="brownie1.jpg" alt="BROWNIE PLAYING IN THE PARK">
-            <img src="brownie2.jpg" alt="BROWNIE RESTING ON THE COUCH">
-            <img src="brownie3.jpg" alt="BROWNIE ENJOYING THE OUTDOORS">
-        </section>
-        <p class="contact">CONTACT FOR INQUIRIES: <a href="mailto:bangalore@bbmp.com">BANGALORE@BBMP.COM</a></p>
-        <ul class="details-list">
-            <li>OWNER: SAI VINAY</li>
-            <li>ADDRESS: 2nd STREET, JP NAGAR, BANGALORE</li>
-            <li>NOTE: If this dog appears lost or found in problametic situation please contact the owner immediately.</li>
-        </ul>
+        <h2>Upload Dog Details</h2>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="dog_name" placeholder="Dog Name" required>
+            <input type="text" name="breed" placeholder="Breed" required>
+            <input type="text" name="territory" placeholder="Territory" required>
+            <input type="number" name="age" placeholder="Age (in years)" required>
+            <select name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <textarea name="vaccination" placeholder="Vaccination Details" required></textarea>
+            <input type="text" name="health" placeholder="Health Status" required>
+            <select name="abc" required>
+                <option value="Done">Animal Birth Control: Done</option>
+                <option value="Not Done">Animal Birth Control: Not Done</option>
+            </select>
+            <input type="tel" name="contact" placeholder="Contact Number" required>
+            <input type="email" name="email" placeholder="Contact Email" required>
+            <input type="text" name="owner" placeholder="Owner Name" required>
+            <input type="text" name="address" placeholder="Owner Address" required>
+            <label>Upload Profile Image:</label>
+            <input type="file" name="profile_image" accept="image/*" required>
+            <label>Upload 3 Additional Images:</label>
+            <input type="file" name="dog_images[]" accept="image/*" required>
+            <input type="file" name="dog_images[]" accept="image/*" required>
+            <input type="file" name="dog_images[]" accept="image/*" required>
+            <button type="submit">Upload Details</button>
+        </form>
     </div>
 </body>
 </html>
